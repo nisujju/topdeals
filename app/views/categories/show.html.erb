@@ -1,0 +1,47 @@
+<% provide(:title, @category.name + ' buy & sales lead') %>
+<div class="wrapper">
+<div class="container">
+<h1 class="headline">Posts for <%= @category.name %></h1>
+
+
+<ol class="microposts">
+
+<% @posts.each do |micropost| %>
+<li id="micropost-<%= micropost.id %>">
+  <%= link_to gravatar_for(micropost.user, size: 50), micropost.user%>
+  <span class="user"><%= link_to micropost.user.name, micropost.user, class: "action-button shadow animate red" %></span>
+  <% if micropost.buysell == "Buy" %>
+  <span> <%= link_to micropost.buysell, buy_path, class: "action-button shadow animate Sell" %></span>
+  <%else%>
+  <span> <%= link_to micropost.buysell, sell_path, class: "action-button shadow animate Buy" %></span>
+  <%end%>
+  <!-- <span class="action-button shadow animate <%=micropost.buysell %>"> <%=micropost.buysell %></span>  -->
+  <br><br><br>
+  <span class="title"><%= micropost.title %></span>
+  <span class="content"><%= micropost.content %></span>
+  <% if !micropost.amount.nil? %>
+  <span class="offer">Offer Amount: $<%=micropost.amount %></span>
+  <%else%>
+  <span class="timestamp">Offer Amount: Not Specified</span>
+  <%end%>
+  <span class="timestamp">Contact me @ <%=micropost.contact_detail %> </span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+  </span>
+  <span>
+    <% if current_user?(micropost.user) %>
+      <%= link_to "delete", micropost, class: "delete-button shadow animate", method: :delete,
+                                       data: { confirm: "Do you want to delete this post"}  %>
+    <% end %>
+  </span>
+</li>
+<%end%>
+
+</ol>
+
+<%= will_paginate @posts %>
+</div>
+</div>
+<% if @posts.empty? %>
+  <h2 class="shadow" style="color: #000"> All deals under this category are now over. New deals coming soon! </h2>
+<%end%>

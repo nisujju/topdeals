@@ -1,0 +1,106 @@
+<!--   <div class="center jumbotron">
+    <h1>Welcome to the Sample App</h1>
+
+    <h2>
+      This is the home page for the
+      <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
+      sample application.
+    </h2>
+    <% if logged_in? %>
+      <%= link_to "Post Now!", new_micropost_path, class: "btn btn-lg btn-primary" %>
+    <% else %>
+      <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+    <% end %>
+  </div>
+
+  <%= link_to image_tag("rails.png", alt: "Rails logo"),
+              'http://rubyonrails.org/' %> -->
+
+  <!-- Header -->
+  <header id="head">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="area">
+          ⚠ India Leads ⚠
+        </div>
+        <h1 class="lead">Top Sales &amp; Marketing leads</h1>
+        <p class="tagline">Get the awesome leads for your business and grow it multiple folds in short time. We provide platform to help grow your business globally by promoting sales and business leads for you.</p>
+<!--         <p><a class="btn btn-default btn-lg" role="button">MORE INFO</a> <a class="btn btn-action btn-lg" role="button">DOWNLOAD NOW</a></p> -->
+        <%if logged_in? %>
+          <p><%= link_to "Post buy/sell lead now", new_micropost_path, class: "btn btn-action btn-lg" %> 
+          <%= link_to "View leads categories", categories_path, class: "btn btn-default btn-lg" %> </p>
+        <%else%>
+          <p><%= link_to "Sign up", signup_path, class: "btn btn-action btn-lg" %> 
+             <%= link_to "Log In", login_path, class: "btn btn-default btn-lg" %>
+          </p>
+        <%end%>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Intro -->
+  <div class="container text-center">
+    <br> <br>
+    <h2 class="thin">If you are looking for some exciting business oportunities or trade deals than you are at right place.</h2>
+    <p class="text-muted">
+      Signup/login and than you are free to post your business/trade offers in 18 categories. These posts are visible to proespective buyers and sellers all across the world. Make your business grow multiple times by generating buy and/or sellling leads and broadcasting it to potential buyers &amp; sellers across the world.
+    </p>
+  </div>
+
+  <div class="jumbotron top-space bottom-space">
+    <div class="container">
+      
+      <h3 class="text-center thin">Popular categories</h3>
+      
+      <div class="row">
+        <div class="col-md-3 col-sm-6 highlight">
+          <div class="h-caption"><h4><i class="fa fa-shopping-bag fa-5"></i><%= link_to "Apparel & Fashion", category_path("1"), class: "btn btn-default btn-lg"%></h4></div>
+        </div>
+        <div class="col-md-3 col-sm-6 highlight">
+          <div class="h-caption"><h4><i class="fa fa-users fa-5"></i><%= link_to "Business Services", category_path("13"), class: "btn btn-default btn-lg" %></h4></div>
+        </div>
+        <div class="col-md-3 col-sm-6 highlight">
+          <div class="h-caption"><h4><i class="fa fa-industry fa-5"></i><%= link_to "Industrial Supply", category_path("17"), class: "btn btn-default btn-lg" %></h4></div>
+        </div>
+        <div class="col-md-3 col-sm-6 highlight">
+          <div class="h-caption"><h4><i class="fa fa-diamond fa-5"></i><%= link_to "Metals & Minerals", category_path("16"), class: "btn btn-default btn-lg" %></h4></div>
+        </div>
+      </div> <!-- /row  -->
+    
+    </div>
+  </div>
+  <!-- /Highlights -->
+
+
+    <aside class="callout padding-bottom-space">
+        <div class="text-vertical-center">
+        
+          <div class="text-center">
+          <h2 class="font-medium margin-muted padding-space">How it works</h2><span></span>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-md-offset-0 col-sm-11 col-sm-offset-1">
+          <div class="col-md-2 col-sm-12 text-center"></div>
+          <div class="col-md-2 col-sm-3 text-center">
+                            <%= image_tag "book1.png", width: "50" %>
+                            <h4 class="font-medium">SignUp/Login</h4>
+                            Login if you have account else sign up to get access to post or view deals.
+        </div>
+        <div class="col-md-1 col-sm-1 text-center"></div>
+        <div class="col-md-2 col-sm-3 text-center">
+                            <%= image_tag "schedule1.png", width: "50" %>               
+                            <h4 class="font-medium">Post(Buy/Sell) Deal</h4>
+                            After signing up/login please post your requirement under appropriate category.
+        </div>
+        <div class="col-md-1 col-sm-1 text-center"></div>
+        <div class="col-md-2 col-sm-3 text-center">
+                            <%= image_tag "relax1.png", width: "50" %>
+                            <h4 class="font-medium">Relax</h4>
+                            You will now be contacted by the prospective buyers and sellers.
+        </div>
+        <div class="col-md-2 col-sm-12 text-center"></div>
+      </div>
+
+        </div>
+    </aside>

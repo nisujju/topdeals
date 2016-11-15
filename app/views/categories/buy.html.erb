@@ -1,0 +1,22 @@
+<% provide(:title, 'All Microposts under category') %>
+<div style = "background-color: #">
+<div class="container">
+<h1 class="headline">Buying deals for <%= @category.name %></h1>
+
+
+<ol class="microposts">
+<% @buy.each do |micropost| %>
+<li id="micropost-<%= micropost.id %>">
+  <%= link_to gravatar_for(micropost.user, size: 50), micropost.user%>
+  <span class="user"><%= link_to micropost.user.name, micropost.user, class: "action-button shadow animate red" %></span><span class="action-button shadow animate <%=micropost.buysell %>"> <%=micropost.buysell %></span>
+  <span class="content"><%= micropost.content %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+  </span>
+</li>
+<%end%>
+</ol>
+
+<%= will_paginate @buy %>
+</div>
+</div>

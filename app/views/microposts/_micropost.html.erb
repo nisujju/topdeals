@@ -1,0 +1,21 @@
+
+# <% @microposts.each do |micropost| %>
+# <li id="micropost-<%= micropost.id %>">
+#   <%= link_to gravatar_for(micropost.user, size: 50), micropost.user%>
+# <!--   <% if micropost.category != nil %>
+#     <h6><%= link_to micropost.category.name, micropost.category  %></h6>
+#   <%end%>
+#   <span class="user"><%= link_to micropost.user.name, micropost.user %></span> -->
+#   <span class="user"><%= link_to micropost.user.name, micropost.user, class: "action-button shadow animate red" %></span>
+#   <span><%= link_to micropost.category.name, micropost.category, class: "action-button shadow animate yellow"  %></span>
+#   <% if micropost.buysell == "Buy" %>
+#   <span> <%= link_to micropost.buysell, '#', class: "action-button shadow animate Sell" %></span>
+#   <%else%>
+#   <span> <%= link_to micropost.buysell, '#', class: "action-button shadow animate Buy" %></span>
+#   <%end%>
+#   <span class="content"><%= micropost.content %></span>
+#   <span class="timestamp">
+#     Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+#   </span>
+# </li>
+# <%end%>

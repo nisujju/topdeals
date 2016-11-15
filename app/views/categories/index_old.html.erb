@@ -1,0 +1,89 @@
+<!--<% @categories.each do |category| %>
+<li>
+  <span class="user"><%= link_to category.name, category %></span>
+</li>
+<%end%>
+-->
+
+<div class ="category-display">
+<section class=" container-fluid services-block text-center">
+
+<div id="block-head text-center"><h1> Categories</h1><span></span></div>
+<h2 class="shadow"> Click on below categories for exciting deals </h2>
+<%if logged_in? %>
+    <p><%= link_to "Post buy/sell deal now", new_micropost_path, class: "btn btn-action btn-lg" %> 
+<%end%>
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 services">
+<a href="/categories/1" target="_blank"><div class="services-image"><img class="img-responsive" src="http://img.tradeindia.com/new_website1/ti-homepage-ver4/products-categories/apparel-fashion.png">Apparel &amp; Fashion</div></a>
+</div>
+
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 services">
+<a href="/categories/2" target="_blank"><div class="services-image"><img class="img-responsive" src="http://img.tradeindia.com/new_website1/ti-homepage-ver4/products-categories/agriculture.png">Agriculture</div></a>
+</div>
+
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 services">
+<a href="/categories/3" target="_blank"><div class="services-image"><img class="img-responsive" src="http://img.tradeindia.com/new_website1/ti-homepage-ver4/products-categories/automobile.png">Automobile</div></a>
+</div>
+
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 services">
+<a href="/categories/4" target="_blank"><div class="services-image"><img class="img-responsive" src="http://img.tradeindia.com/new_website1/ti-homepage-ver4/products-categories/computer-hardware-software.png">Computer Hardware &amp; Software</div></a>
+</div>
+
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 services">
+<a href="/categories/5" target="_blank"><div class="services-image"><img class="img-responsive" src="http://img.tradeindia.com/new_website1/ti-homepage-ver4/products-categories/consumer-electronics.png">Consumer Electronics</div></a>
+</div>
+
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 services">
+<a href="/categories/6" target="_blank"><div class="services-image"><img class="img-responsive" src="https://d30y9cdsu7xlg0.cloudfront.net/png/29541-200.png">Mobile Phones</div></a>
+</div>
+
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 services">
+<a href="/categories/7" target="_blank"><div class="services-image"><img class="img-responsive" src="http://img.tradeindia.com/new_website1/ti-homepage-ver4/products-categories/electronics-electrical-supplies.png">Electronics &amp; Electrical</div></a>
+</div>
+
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 services">
+<a href="/categories/8" target="_blank"><div class="services-image"><img class="img-responsive" src="http://img.tradeindia.com/new_website1/ti-homepage-ver4/products-categories/energy-power.png">Energy &amp; Power</div></a>
+</div>
+
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 services">
+<a href="/categories/9" target="_blank"><div class="services-image"><img class="img-responsive" src="http://img.tradeindia.com/new_website1/ti-homepage-ver4/products-categories/food-beverage.png">Food &amp; Beverage</div></a>
+</div>
+
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 services">
+<a href="/categories/10" target="_blank"><div class="services-image"><img class="img-responsive" src="http://img.tradeindia.com/new_website1/ti-homepage-ver4/products-categories/construction-real-estate.png">Construction &amp; Real Estate</div></a>
+</div>
+
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 services">
+<a href="/categories/11" target="_blank"><div class="services-image"><img class="img-responsive" src="http://www.calgoncarbon.com/wp-content/uploads/2015/03/Icon-BioBasedChemicals.png">Chemicals</div></a>
+</div>
+
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 services">
+<a href="/categories/6" target="_blank"><div class="services-image"><img class="img-responsive" src="https://e.ridersdiscount.com/generated/478/1/50478-black-river-road-vandal-leather-vest-2013_260.jpg">Leather &amp; Leather Products</div></a>
+</div>
+
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 services">
+<a href="/categories/13" target="_blank"><div class="services-image"><img class="img-responsive" src="http://cdn0.capterra-static.com/assets/images/hubpages/survey-report/report-handshake-icon.png">Business Services</div></a>
+</div>
+
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 services">
+<a href="/categories/14" target="_blank"><div class="services-image"><img class="img-responsive" src="https://images-na.ssl-images-amazon.com/images/I/71l1K-DC8VL._SL1000_.jpg">Home Textiles &amp; Furnishings</div></a>
+</div>
+
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 services">
+<a href="/categories/15" target="_blank"><div class="services-image"><img class="img-responsive" src="http://2.imimg.com/data2/AB/FT/MY-2316978/cotton-fabric-250x250.jpg">Textile &amp; Fabrics</div></a>
+</div>
+
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 services">
+<a href="/categories/16" target="_blank"><div class="services-image"><img class="img-responsive" src="http://georesonance.com/img/icon_mineral_exploration.svg">Minerals &amp; Metals</div></a>
+</div>
+
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 services">
+<a href="/categories/17" target="_blank"><div class="services-image"><img class="img-responsive" src="http://cubez.ae/images/construction_industries.png">Industrial Supplies</div></a>
+</div>
+
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 services">
+<a href="/categories/18" target="_blank"><div class="services-image"><img class="img-responsive" src="http://s3.amazonaws.com/saveoneverything_assets/assets/images/icons/health_beauty_icon.png">Health &amp; Beauty</div></a>
+</div>
+
+</section>
+</div>

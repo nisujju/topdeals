@@ -10,7 +10,7 @@ class MicropostsController < ApplicationController
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
       flash[:success] = "Post created!"
-      redirect_to microposts_url
+      redirect_to category_path(@micropost.category_id)
     else
       render 'new'
     end

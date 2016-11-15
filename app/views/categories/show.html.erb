@@ -3,6 +3,10 @@
 <div class="container">
 <h1 class="headline">Posts for <%= @category.name %></h1>
 
+<div class="center">
+<p><%= link_to "Click for all buying deals", buy_path, class: "btn btn-default btn-lg" %>   <p>  
+<p><%= link_to "Click for all selling deals", sell_path, class: "btn btn-default btn-lg" %> </p>
+</div>
 
 <ol class="microposts">
 

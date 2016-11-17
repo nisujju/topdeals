@@ -2,14 +2,43 @@
 <div class="wrapper">
 <div class="container">
 <h1 class="headline">Buying deals for <%= @category.name %></h1>
-
+<% if !@posts.empty? %>
+<div class="center">
+  <div class="col-xs-12 col-sm-6 col-md-4 category-post">
+    <%= link_to "Click for all sell deals", sell_path, class: "btn btn-default btn-lg" %>  
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-4 category-post">
+    <%= link_to "Post buy or sell deal now", new_micropost_path, class: "btn btn-action btn-lg" %> 
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-4 category-post">
+    <%= link_to "View all buy/sell deals ", category_path, class: "btn btn-default btn-lg" %> 
+  </div>
+</div>
+<%else%>
+ <div class="center">
+  <div class="col-sm-6 category-post">
+    <%= link_to "View Categories", categories_path, class: "btn btn-default btn-lg" %>  
+  </div>
+  <div class="col-sm-6 category-post">
+    <%= link_to "Post new deal", new_micropost_path, class: "btn btn-action btn-lg" %> 
+  </div>
+ </div>
+<%end%>
 
 <ol class="microposts">
 <% @buy.each do |micropost| %>
 <li id="micropost-<%= micropost.id %>">
   <%= link_to gravatar_for(micropost.user, size: 50), micropost.user%>
   <span class="user"><%= link_to micropost.user.name, micropost.user, class: "action-button shadow animate red" %></span><span class="action-button shadow animate <%=micropost.buysell %>"> <%=micropost.buysell %></span>
+  <br><br><br>
+  <span class="title"><%= micropost.title %></span>
   <span class="content"><%= micropost.content %></span>
+  <% if !micropost.amount.nil? %>
+  <span class="offer">Offer Amount: $<%=micropost.amount %></span>
+  <%else%>
+  <span class="timestamp">Offer Amount: Not Specified</span>
+  <%end%>
+  <span class="timestamp">Contact me @ <%=micropost.contact_detail %> </span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(micropost.created_at) %> ago.
   </span>

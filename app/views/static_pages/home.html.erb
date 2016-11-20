@@ -1,21 +1,4 @@
-<!--   <div class="center jumbotron">
-    <h1>Welcome to the Sample App</h1>
-
-    <h2>
-      This is the home page for the
-      <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-      sample application.
-    </h2>
-    <% if logged_in? %>
-      <%= link_to "Post Now!", new_micropost_path, class: "btn btn-lg btn-primary" %>
-    <% else %>
-      <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-    <% end %>
-  </div>
-
-  <%= link_to image_tag("rails.png", alt: "Rails logo"),
-              'http://rubyonrails.org/' %> -->
-
+<% provide(:metacontent, "We provide network for sales & marketing leads for free. Ours is a B2B sales platform for buyers, sellers and traders. Post free buying and selling leads.") %>
   <!-- Header -->
   <header id="head">
     <div class="container-fluid">
@@ -23,8 +6,8 @@
         <div class="area">
           ⚠ India Leads ⚠
         </div>
-        <h1 class="lead">Top Sales &amp; Marketing leads</h1>
-        <p class="tagline">Get the awesome leads for your business and grow it to maximum limit in minimum time. We provide platform to help grow your business globally by promoting sales and business leads. Access valuable sales leads and directly contact buyers and sellers. Post your offer and let the world approach you with best quotes.</p>
+        <h1 class="lead">Free Sales &amp; Marketing leads</h1>
+        <p class="tagline">Get the awesome leads for your business and grow it to maximum limit in minimum time. We provide platform to help grow your business globally by promoting sales and business leads. Access valuable sales offers and directly contact buyers and sellers. Post your offer and let the world approach you with best quotes.</p>
 <!--         <p><a class="btn btn-default btn-lg" role="button">MORE INFO</a> <a class="btn btn-action btn-lg" role="button">DOWNLOAD NOW</a></p> -->
         <%if logged_in? %>
           <p><%= link_to "Post buy/sell lead now", new_micropost_path, class: "btn btn-action btn-lg" %> 

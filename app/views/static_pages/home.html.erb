@@ -35,19 +35,46 @@
     <div class="container">
       
       <h3 class="text-center thin">Few popular categories</h3>
+      <% if !logged_in? %>
+      <h6 class="text-center">Click on below link after sign in<h6>
+      <%end%>
       
       <div class="row">
         <div class="col-md-3 col-sm-6 highlight">
-          <div class="h-caption"><h4><i class="fa fa-shopping-bag fa-5"></i><%= link_to "Apparel & Fashion", category_path("1"), class: "btn btn-default btn-lg"%></h4></div>
+          <div class="h-caption"><h4><i class="fa fa-shopping-bag fa-5"></i>
+          <%if logged_in? %>
+            <%= link_to "Apparel & Fashion", category_path("1"), class: "btn btn-default btn-lg"%></h4>
+          <%else%>
+            <%= link_to "Apparel & Fashion", login_path, class: "btn btn-default btn-lg"%></h4>
+          <%end%>
+          </div>
         </div>
         <div class="col-md-3 col-sm-6 highlight">
-          <div class="h-caption"><h4><i class="fa fa-users fa-5"></i><%= link_to "Business Services", category_path("13"), class: "btn btn-default btn-lg" %></h4></div>
+          <div class="h-caption"><h4><i class="fa fa-users fa-5"></i>
+          <% if logged_in? %>
+          <%= link_to "Business Services", category_path("13"), class: "btn btn-default btn-lg" %></h4>
+          <%else%>
+            <%= link_to "Business Services", login_path, class: "btn btn-default btn-lg"%></h4>
+          <%end%>
+          </div>
         </div>
         <div class="col-md-3 col-sm-6 highlight">
-          <div class="h-caption"><h4><i class="fa fa-industry fa-5"></i><%= link_to "Industrial Supply", category_path("17"), class: "btn btn-default btn-lg" %></h4></div>
+          <div class="h-caption"><h4><i class="fa fa-industry fa-5"></i>
+          <%if logged_in? %>
+            <%= link_to "Industrial Supply", category_path("17"), class: "btn btn-default btn-lg" %></h4>
+          <%else%>
+            <%= link_to "Industrial Supply", login_path, class: "btn btn-default btn-lg" %></h4>
+          <%end%>
+          </div>
         </div>
         <div class="col-md-3 col-sm-6 highlight">
-          <div class="h-caption"><h4><i class="fa fa-diamond fa-5"></i><%= link_to "Metals & Minerals", category_path("16"), class: "btn btn-default btn-lg" %></h4></div>
+          <div class="h-caption"><h4><i class="fa fa-diamond fa-5"></i>
+          <%if logged_in? %>
+          <%= link_to "Metals & Minerals", category_path("16"), class: "btn btn-default btn-lg" %></h4>
+          <%else%>
+          <%= link_to "Metals & Minerals", login_path, class: "btn btn-default btn-lg" %></h4>
+          <%end%>
+          </div>
         </div>
       </div> <!-- /row  -->
     

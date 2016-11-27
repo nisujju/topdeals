@@ -4,6 +4,11 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    if !logged_in?
+      store_location
+      flash[:warning] = "Sign In/ Signup to access our leads"
+      redirect_to login_path
+    end
   	@category=Category.find(params[:id])
   	@posts=@category.microposts.paginate(page: params[:page])
   end

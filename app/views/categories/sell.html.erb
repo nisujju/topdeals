@@ -1,17 +1,17 @@
 <% provide(:title, 'Sale leads for ' + @category.name) %>
 <div class = "wrapper">
 <div class="container">
-<h1 class="headline">Selling deals for <%= @category.name %></h1>
+<h1 class="headline">Selling leads for <%= @category.name %></h1>
 <% if !@posts.empty? %>
 <div class="center">
   <div class="col-xs-12 col-sm-6 col-md-4 category-post">
-    <%= link_to "Click for all buying deals", buy_path, class: "btn btn-default btn-lg" %>  
+    <%= link_to "Click for all buying leads", buy_path, class: "btn btn-default btn-lg" %>  
   </div>
   <div class="col-xs-12 col-sm-6 col-md-4 category-post">
-    <%= link_to "Post buy or sell deal now", new_micropost_path, class: "btn btn-action btn-lg" %> 
+    <%= link_to "Post buy or sell lead now", new_micropost_path, class: "btn btn-action btn-lg" %> 
   </div>
   <div class="col-xs-12 col-sm-6 col-md-4 category-post">
-    <%= link_to "View all buy/sell deals ", category_path, class: "btn btn-default btn-lg" %> 
+    <%= link_to "View all buy/sell leads ", category_path, class: "btn btn-default btn-lg" %> 
   </div>
 </div>
 <%else%>
@@ -20,7 +20,7 @@
     <%= link_to "View Categories", categories_path, class: "btn btn-default btn-lg" %>  
   </div>
   <div class="col-sm-6 category-post">
-    <%= link_to "Post new deal", new_micropost_path, class: "btn btn-action btn-lg" %> 
+    <%= link_to "Post new lead", new_micropost_path, class: "btn btn-action btn-lg" %> 
   </div>
  </div>
 <%end%>

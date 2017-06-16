@@ -1,28 +1,19 @@
-== README
+== Ruby on Rails App Source library for Tradeindialeads
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the repository for tradeindialeads.com which is deployed at Heroku link https://blooming-cliffs-75251.herokuapp.com/
 
-Things you may want to cover:
+Below are important technical points that this app covers.
 
-* Ruby version
+* Essential signup/login required to use the app features. This app uses state of the art hash digest feature of Bcrypt and encryption logic to safely log and signup the user.
 
-* System dependencies
+* Secured sessions and cookies management enables authorization and authentication of user and there resources.
 
-* Configuration
+* App features bootstrap for mobile first development. Bootstrap grid system used to support app on various devise size along with use of 
 
-* Database creation
+* Other app specifications includes PostgreSQL as a database along with PUMA server configuration. 
 
-* Database initialization
+* Deployed to heroku and link provided above.
 
-* How to run the test suite
+* Basics of SEO implemented such as meta description, page title set accordingly and other important standards followed.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.

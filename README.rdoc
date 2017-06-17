@@ -8,7 +8,7 @@ Below are important technical points that this app covers.
 
 * Secured sessions and cookies management enables authorization and authentication of user and there resources.
 
-* App features bootstrap for mobile first development. Bootstrap grid system used to support app on various devise size along with use of 
+* App features bootstrap for mobile first development. Bootstrap grid system used to support app on various devise size along with use of modern UI techniques. 
 
 * Other app specifications includes PostgreSQL as a database along with PUMA server configuration. 
 
